@@ -27,13 +27,15 @@ class SocialiteController extends Controller
             $user = User::updateOrCreate([
                 'google_id' => $socialUser->id,
             ], [
-                'name' => $socialUser->name,
-                'username' => str_replace(' ', '', $socialUser->name),
-                'email' => $socialUser->email,
-                'password' => Hash::make($socialUser->token),
-                'google_token' => $socialUser->token,
-                'google_refresh_token' => $socialUser->refreshToken,
+                'name'                  => $socialUser->name,
+                'username'              => str_replace(' ', '', $socialUser->name),
+                'email'                 => $socialUser->email,
+                'password'              => Hash::make($socialUser->token),
+                'google_token'          => $socialUser->token,
+                'google_refresh_token'  => $socialUser->refreshToken,
+                'provider'              => 'google',
             ]);
+
             Auth::login($user);
 
             return redirect('/');

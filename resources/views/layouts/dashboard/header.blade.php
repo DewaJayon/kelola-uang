@@ -68,7 +68,7 @@
                         </span>
 
                         <span class="h-12 w-12 rounded-full">
-                            <img src="./images/user/user-01.png" alt="User" />
+                            <img src="{{ asset(auth()->user()->avatar) }}" alt="{{ auth()->user()->name }}" />
                         </span>
 
                         <svg :class="dropdownOpen && 'rotate-180'" class="hidden fill-current sm:block" width="12" height="8" viewBox="0 0 12 8" fill="none"
