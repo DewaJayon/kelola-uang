@@ -40,6 +40,8 @@
         "alpinejs": "^3.10.3",
         "apexcharts": "^3.36.3",
         "flatpickr": "^4.6.13",
-        "jsvectormap": "^1.5.1"
+        "flowbite": "^2.5.2",
+        "jsvectormap": "^1.5.1",
+        "simple-datatables": "^9.2.1"
     }
 }
